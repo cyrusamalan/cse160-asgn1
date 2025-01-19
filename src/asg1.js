@@ -91,6 +91,16 @@ function setupUI() {
   document.getElementById('redSlider').oninput = updateColor;
   document.getElementById('greenSlider').oninput = updateColor;
   document.getElementById('blueSlider').oninput = updateColor;
+
+  // Tree button toggle logic
+  document.getElementById('treeButton').onclick = () => {
+    const treeImage = document.getElementById('treeImage');
+    if (treeImage.style.display === 'none') {
+      treeImage.style.display = 'block';
+    } else {
+      treeImage.style.display = 'none';
+    }
+  };
 }
 
 function updateColor() {
