@@ -8,18 +8,21 @@
       border: 1px solid black;
       display: block;
       margin: 20px auto;
-      position: relative; /* Ensure proper layering */
+      position: relative; 
     }
     .controls {
       text-align: center;
       margin: 10px;
     }
+    #overlayContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 10px auto;
+    }
     #overlayImage {
-      position: absolute;
-      top: 20px; /* Adjust to align properly */
-      left: 50%; /* Center horizontally */
-      transform: translateX(-50%); /* Center adjustment */
-      pointer-events: none; /* Ensure clicks pass through */
+      margin-left: 5px; /* Add space between canvas and image */
     }
   </style>
 </head>
@@ -36,9 +39,9 @@
     Green: <input type="range" id="greenSlider" min="0" max="255" value="255">
     Blue: <input type="range" id="blueSlider" min="0" max="255" value="255">
   </div>
-  <div style="position: relative; width: 400px; margin: 0 auto;">
+  <div id="overlayContainer">
     <canvas id="webgl" width="400" height="400"></canvas>
-    <img id="overlayImage" src="drawing.jpg" alt="Overlay Image" width="80">
+    <img id="overlayImage" src="drawing.jpg" alt="Overlay Image" width="200">
   </div>
   <script src="../lib/cuon-utils.js"></script>
   <script src="../lib/webgl-utils.js"></script>
