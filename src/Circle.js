@@ -1,3 +1,6 @@
+// Cyrus Amalan
+// camalan@ucsc.edu
+
 class Circle {
     constructor() {
         this.type = 'circle'; // Type identifier for the shape
@@ -8,7 +11,7 @@ class Circle {
     }
 
     render() {
-        const [x, y] = this.position; // Center position of the circle
+        const [x, y] = this.position; 
         const rgba = this.color; // Circle color
         const radius = this.size / 200.0; // Calculate radius 
 
@@ -42,11 +45,11 @@ function drawTriangle(vertices) {
         return -1;
     }
 
-    // Bind the buffer and write vertices to it
+    // Bind the buffer 
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.DYNAMIC_DRAW);
 
-    // Assign the buffer to the shader's attribute
+    // Assign the buffer 
     gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(a_Position);
 

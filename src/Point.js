@@ -1,3 +1,5 @@
+// Cyrus Amalan
+// camalan@ucsc.edu
 
 class Point {
     constructor() {
@@ -14,13 +16,13 @@ class Point {
 
         gl.disableVertexAttribArray(a_Position);
 
-        // Pass the position to the shader
+        // Pass the position 
         gl.vertexAttrib3f(a_Position, x, y, 0.0);
 
-        // Pass the color to the shader
+        // Pass the color 
         gl.uniform4f(u_FragColor, rgba[0], rgba[1], rgba[2], rgba[3]);
 
-        // Pass the size to the shader
+        // Pass the size 
         gl.uniform1f(u_Size, size);
 
         // Draw the point
