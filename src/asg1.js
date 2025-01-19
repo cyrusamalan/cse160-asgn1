@@ -1,3 +1,6 @@
+// Cyrus Amalan
+// camalan@ucsc.edu
+
 // Vertex Shader
 const VSHADER_SOURCE = `
   attribute vec4 a_Position;
